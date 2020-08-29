@@ -1,0 +1,32 @@
+#! /data/data/com.termux/files/usr/bin/bash/   
+#variables
+
+        passwd="NINGUN SISTEMA ES SEGURO"
+        echo $passwd
+
+#funciones
+        function reinicio {
+                echo $(clear)
+
+
+
+        setterm -foreground green
+echo     "#=================================#"
+echo     "#     HOLA BIENVENIDOS A TERMUX   #"
+echo     "#          INICIA SESION          #"
+echo     "#            EN TERMUX            #"
+echo     "#=================================#"
+        read -p "    ESCRIBE TU PASSWORD >> " passwd1
+        setterm -foreground white
+}
+reinicio
+
+while [ $passwd1 != $passwd1 ] ;do
+        reinicio
+done
+
+if [ $passwd1 = $passwd ]; then
+        clear
+else
+        reinicio
+fi
